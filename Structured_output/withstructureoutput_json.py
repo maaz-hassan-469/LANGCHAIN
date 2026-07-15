@@ -68,4 +68,4 @@ result=structured_model.invoke("""Right out of the box, the first thing you noti
 The buttons are incredibly tactile and give a satisfying, clicky feedback when pressed. My only minor complaint about the physical design is the placement of the secondary ports. They are located on the bottom left edge, which makes plugging in accessories a bit awkward if you are using it while it charges.""")
 
 print(result)
-print(result.name)
+print(result["product"]["name"])
