@@ -29,4 +29,10 @@ template=PromptTemplate(
 chain=template|model|parser
 
 result=chain.invoke({"place":"pakistan"})
-print(result)
+
+
+# prompt=template.invoke({"place":"pakistan"})
+# result=model.invoke(prompt)
+
+# final_result=parser.parse(result)
+# print(final_result)
