@@ -26,8 +26,7 @@ template=PromptTemplate(
     partial_variables={'formar_instruction':parser.get_format_instructions()}
 )
 
-prompt=template.invoke({"place":"pakistan"})
-result=model.invoke(prompt)
+chain=template|model|parser
 
-final_result=parser.parse(result)
-print(final_result)
+result=chain.invoke({"place":"pakistan"})
+print(result)
