@@ -13,12 +13,8 @@ llm1=HuggingFaceEndpoint(
     repo_id="deepseek-ai/DeepSeek-V4-Pro",
     task="text-generation"
 )
-llm2=HuggingFaceEndpoint(
-    repo_id="deepseek-ai/DeepSeek-V4-Flash",
-    task="text-generation"
-)
+
 model1=ChatHuggingFace(llm=llm1)
-model2=ChatHuggingFace(llm=llm2)
 
 parser=StrOutputParser()
 
