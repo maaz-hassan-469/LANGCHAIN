@@ -25,7 +25,7 @@ parallel_chain=RunnableParallel({
     "explanation":RunnableSequence(prompt2,model,parser)
 })
 
-final_chain=RunnableSequence(first_chain,parallel_chain,parser)
+final_chain=RunnableSequence(first_chain,parallel_chain)
 
 result=final_chain.invoke({"topic":"coding"})
 
