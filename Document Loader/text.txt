@@ -1,0 +1,7 @@
+Artificial Intelligence and Large Language Models (LLMs) are transforming software architectures. 
+Frameworks like LangChain allow developers to chain together prompt templates, models, and data retrievers.
+To build a Retrieval-Augmented Generation (RAG) system, raw documents must be processed in four distinct phases:
+1. Document Ingestion: Loading raw text, PDFs, or CSV files into the environment using standardized loaders.
+2. Text Splitting: Chunking massive text streams into digestible, overlapping blocks using tools like RecursiveCharacterTextSplitter.
+3. Embedding Generation: Converting textual data chunks into dense numerical vector representations.
+4. Vector Storage: Indexing the generated vectors inside high-performance databases like FAISS or ChromaDB for rapid similarity search executions.
