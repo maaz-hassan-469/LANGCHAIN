@@ -135,12 +135,17 @@ Below is the complete mapping of my current architectural modules. Each section 
 1. **Clone the repository ecosystem:**
    ```bash
    git clone https://github.com/maaz-hassan-469/Local-RAG-Pipeline
-Install dependency packages:
+---
 
-Bash
+## 🛠️ Initial Configuration & Setup
+
+### 1. Dependency Installation
+Before executing any scripts, ensure you have your virtual environment active and install the required library packages using `pip`:
+
+```bash
 pip install -r requirements.txt
-Environment Setup:
-Create an .env file inside your root directory containing your developer access keys:
+2. Environment Configuration
+The scripts utilize multi-provider endpoints. Secure your API credentials by creating an .env file within your root repository path:
 
 Code snippet
 OPENAI_API_KEY="your_openai_key"
@@ -148,8 +153,8 @@ ANTHROPIC_API_KEY="your_anthropic_key"
 GOOGLE_API_KEY="your_google_gemini_key"
 HUGGINGFACEHUB_API_TOKEN="your_huggingface_token"
 📈 Connect with Me
-Let's discuss conversational interfaces, agentic structures, and vector indexes:
+Let's exchange ideas on conversational interfaces, dynamic agentic structures, or semantic vector indexes!
 
-Email: maazhassaan469@gmail.com
+📧 Email: maazhassaan469@gmail.com
 
-LinkedIn: www.linkedin.com/in/maaz-hassan-690a97359
+💼 LinkedIn: www.linkedin.com/in/maaz-hassan-690a97359
