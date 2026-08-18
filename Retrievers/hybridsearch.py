@@ -83,6 +83,12 @@ retriever=vector_store.as_retriever(search_kwargs={"k":3})
 test_query="who is shadab khan"
 bm25_retriever=BM25Retriever.from_documents(player_docs)
 bm25_retriever.k=3
+
+hybrid_retriever=EnsembleRetriever(
+    retrievers=[retriever,bm25_retriever],
+    weights=[0.5,0.5]
+)
 answer1=bm25_retriever.invoke(test_query)
-answer=retriever.invoke(test_query)
-print(answer1)
+answer2=retriever.invoke(test_query)
+answer3=hybrid_retriever.invoke(test_query)
+print(answer3)
