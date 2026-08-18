@@ -98,7 +98,7 @@ health_docs = [
 ]
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-model=llm=HuggingFaceEndpoint(repo_id='deepseek-ai/DeepSeek-V4-Pro',
+llm=HuggingFaceEndpoint(repo_id='deepseek-ai/DeepSeek-V4-Pro',
                         task="text-generation")
 
 model=ChatHuggingFace(llm=llm)
