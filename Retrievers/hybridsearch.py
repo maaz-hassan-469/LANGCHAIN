@@ -1,5 +1,6 @@
 from langchain_chroma import Chroma
 from langchain_ollama import ChatOllama
+from langchain_classic.retrievers import BM25Retriever,EnsembleRetriever
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_core.documents import Document
 
@@ -80,4 +81,8 @@ vector_store=Chroma(
 retriever=vector_store.as_retriever(search_kwargs={"k":3})
 
 test_query="who is shadab khan"
+bm25_retriever=BM25Retriever.from_documents(player_docs)
+bm25_retriever.k=3
+answer1=bm25_retriever.invoke(test_query)
 answer=retriever.invoke(test_query)
+print(answer1)
